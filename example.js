@@ -1,20 +1,29 @@
-var moneroWallet = require('./lib/wallet');
-var Wallet = new moneroWallet();
+var havenWallet = require('./lib/wallet');
+var havenDaemon = require('./lib/dameon');
 
-// examples
+var Wallet = new havenWallet();
+var Daemon = new havenDaemon();
 
-Wallet.create_wallet('monero_wallet').then(function(result){
+// wallet examples
+
+Wallet.create_wallet('haven_wallet').then(function(result){
     console.log(result);
 });
 
-Wallet.open_wallet('monero_wallet').then((result) => {
+Wallet.open_wallet('haven_wallet').then((result) => {
     console.log(result);
 });
 
-Wallet.address().then((result) => {
+Wallet.get_address().then((result) => {
     console.log(result);
 });
 
-Wallet.balance().then((result) => {
+Wallet.get_balance().then((result) => {
+    console.log(result);
+})
+
+// daemon examples
+
+Daemon.getblockcount().then(function(result){
     console.log(result);
 });
