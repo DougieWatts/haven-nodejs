@@ -1,6 +1,6 @@
 {
   "name": "haven-nodejs",
-  "version": "4.0.3",
+  "version": "4.0.4",
   "description": "A Haven library written in Node.js. Forked from PsychicCat/monero-nodejs.git.",
   "main": "./lib/wallet.js",
   "scripts": {
